@@ -34,7 +34,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     color: #000000;
-    min-width: 600px;
+  /*  min-width: 600px;*/
     background-color:#d1d0cc;
     font-size: 18px;
 }
