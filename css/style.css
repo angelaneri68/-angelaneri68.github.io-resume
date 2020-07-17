@@ -1,0 +1,796 @@
+﻿/* RESET CSS    */
+@import url("normalize.css");
+
+
+/* Angela Neri */
+/* 2012-07-12  */
+
+
+/* colors
+
+    
+    red:#d62923;
+    ligth gray: #d1d0cc
+    rose: #bc444c
+    ligth rose: #c0a18e
+    bege: #bc9571
+    dark bege: #9d745b
+    dark gray: #928669
+   
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-family:  Helvetica, Arial, sans-serif;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #000000;
+    min-width: 600px;
+    background-color:#d1d0cc;
+    font-size: 18px;
+}
+
+
+
+
+
+
+footer {
+    text-align: left;
+    color: #000000;
+}
+footer p{
+    margin: 0px;
+}
+
+nav {
+    font-size: 16px;
+    text-align:left;
+    padding-left:10px;
+    min-width: 600px;
+
+}
+
+    nav a {
+        transition: color 0.5s ease;
+        
+        display: block;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        color:#d62923;
+        font-family: 'ITC Benguiat W01';
+        padding-top: 8px;
+        display: inline;
+    }
+        nav a:hover {
+            color:#000000;
+
+            /*text-shadow: -0.08rem -0.08rem 2px #000000;*/
+
+        }
+    nav li {
+        display: inline;
+    }
+
+    nav ul {
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+
+img {
+    max-width: 100%;
+}
+
+.my-img {
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:40px;
+    margin-bottom:40px;
+    height:auto;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #bc444c;
+    text-transform: uppercase;
+    /*  text-shadow: -0.05rem -0.05rem 1px #c0a18e, 0.05rem -0.05rem 1px #c0a18e, -0.05rem 0.05rem 1px #c0a18e, 0.05rem 0.05rem 1px #c0a18e, 0 0 15px #630100, 0 0 20px #450100;*/
+}
+
+h1 {
+    padding-bottom: 10px;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: center;
+    color:#bc444c;
+    /*text-shadow: -0.05rem -0.05rem 1px #c0a18e, 0.05rem -0.05rem 1px #c0a18e, -0.05rem 0.05rem 1px #c0a18e, 0.05rem 0.05rem 1px #c0a18e, 0 0 15px #630100, 0 0 20px #450100;*/
+    /*letter-spacing: -2px;*/
+
+}
+.my-h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+
+ul {
+    padding-left: 0px;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+
+
+ul li {
+    list-style-type:none;
+    margin-left:30px;
+}
+
+ /*ul li::before {content: "•"; color: red;font-size: 24px;
+    display: inline-block; width: 1em;
+    margin-left: -1em}
+*/
+
+.my-bullet {
+    list-style-type:none;
+    margin-left:30px;
+}
+
+
+.my-bullet::before {content: "•"; color: red;font-size: 24px;
+    display: inline-block; width: 1em;
+    margin-left: -1em}
+
+
+
+
+blockquote {
+    font-family: Arial;
+    font-size:0.8em;
+}
+
+
+
+
+tr {
+    background-color: #5AB30A;
+    color:white;
+}
+
+
+
+/* LAYOUT - BOXES */
+.box {
+
+    text-align: left;
+    border-bottom-color: #d62923;
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 40px;
+
+ /*   border-width: 2px;
+    border-color: #01010D;
+    border-style: dashed; */
+}
+
+/* format for each box */
+/* BIG SCREEN - greater than 720 PX *********************************/
+@media screen and (min-width: 721px) {
+
+    .container {
+        background-color: #ffffff;
+        
+        top:200px;
+        display: grid;
+        /* Use the repeat function to repeat same sized columns */
+        grid-template-columns: 100%;
+       
+        grid-auto-rows: auto auto auto auto auto 100px ;
+        grid-gap: 0px;
+        /* Note: use " . "  as a placeholder if you want
+       to leave one section of the grid blank */
+        grid-template-areas: 
+                             "three" 
+                             "four"
+                             "five"
+                             "six"
+                             "seven"
+                             "footer"
+
+    }
+    .about {
+        display:grid;
+        grid-template-columns: 300px auto;
+        grid-auto-rows: auto;
+        grid-gap: 20px;
+        /* Note: use " . "  as a placeholder if you want
+       to leave one section of the grid blank */
+        grid-template-areas: "selfie textAbout" 
+
+    }
+
+    .skillBars {
+        display:grid;
+        padding-bottom: 50px;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        grid-gap: 20px;
+        /* Note: use " . "  as a placeholder if you want
+       to leave one section of the grid blank */
+        grid-template-areas: "skills1 skills2" 
+
+    }
+    .job {
+        display:grid;
+        grid-template-columns: 200px auto;
+        grid-auto-rows:  auto;
+        grid-gap: 20px;
+        /* Note: use " . "  as a placeholder if you want
+       to leave one section of the grid blank */
+        grid-template-areas: "companyImg desc1" 
+
+    }
+    
+    
+
+   
+}
+
+.containerJob {
+    background-color: #ffffff;
+    margin-top:66px;
+    display: grid;
+    /* Use the repeat function to repeat same sized columns */
+    grid-template-columns: 100%;
+   
+    grid-auto-rows: auto auto auto auto 100px ;
+    grid-gap: 0px;
+    /* Note: use " . "  as a placeholder if you want
+   to leave one section of the grid blank */
+    grid-template-areas: 
+                         "job" 
+                         "description"
+                         "skillsJob"
+                         "achievements"
+                         "footer"
+
+}
+
+.compImg {
+      
+    margin-top:20px;
+    margin-bottom:0px;
+    
+    align-self: center;
+    border-radius: 5px 5px 0 0;
+    width: 200px;
+    box-shadow: 1px 5px 9px 1px rgba(0,0,0,0.2);
+
+
+}
+
+.compDesc {
+    text-align: center;
+    color:#9d745b;
+    font-size: 18px;
+}
+
+.desc1 {
+    text-align: center;
+    color: #d62923;
+}
+.desc1 h2 {
+    color: #d62923;
+}
+
+.summary {
+    font-size: 22px;
+    margin-right: 5%;
+    margin-left: 5%;
+
+}
+
+.educationGrid {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    /*margin-left: auto;
+    margin-right: auto; */
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+.eduCard {
+    width: 150px;
+    margin: 10px;
+    text-align: center;
+}
+.eduCard h4 {
+    font-size: 14px;
+}
+
+.eduCard p {
+    font-size: 14px;
+}
+
+
+
+
+.product {
+    background-color: #EEE;
+    box-shadow: 1px 5px 9px 1px rgba(0,0,0,0.2);
+    border: #EEE;
+    border-width: 10px;
+    border-style: solid;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+.product 
+    .product-img-header-ws {
+              background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .8)), url('../images/workspace.jpg'), center right no-repeat;
+              background-size: cover;
+}
+    
+.product 
+    .product-img-header-dp {
+              background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .8)), url('../images/creditcard.jpg'), center bottom no-repeat;
+              background-size: cover;
+}
+
+
+.product 
+    .product-img-header-s4 {
+              background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .8)), url('../images/S4-RC.jpg'), center bottom no-repeat;
+              background-size: cover;
+}
+
+
+.product 
+    .product-img-header-bank {
+              background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .8)), url('../images/bank.jpg'), center bottom no-repeat;
+              background-size: cover;
+}
+
+.product 
+    .product-img-header-gis {
+              background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .8)), url('../images/gisaes2.png'), center bottom no-repeat;
+              background-size: cover;
+}
+  
+.product-img-header {
+  
+      height: 250px;
+      position: relative;
+      margin-bottom: 20px;
+  }
+  
+ .product-img-header   h2 {
+          position: absolute;
+          font-size: 1.2em;
+          bottom: 5px;
+          left: 20px;
+ }
+      
+  
+  
+  
+
+
+
+/****** GRID AREA NAMES ************************/
+/* assign grid-area names to the items... */
+
+
+.menu {
+    grid-area: two;
+
+}
+
+.about {
+    grid-area: three;
+
+}
+
+.experience {
+    grid-area: four;
+}
+
+.skills {
+    grid-area: five;
+}
+
+.education {
+    grid-area:six;
+}
+
+.projects {
+    grid-area:seven;
+}
+
+
+
+/* format for each box */
+/* SMALL SCREEN - less than 720 PX *********************************/
+@media screen and (max-width: 720px) {
+
+
+    body {
+        font-size: 14px;
+
+    }
+    .container {
+        background-color: #ffffff;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 100%;
+        grid-auto-rows: auto auto 600px auto auto 100px;
+        grid-gap: 0px;
+        /* Note: use " . "  as a placeholder if you want
+       to leave one section of the grid blank */
+        grid-template-areas: 
+                            "three" 
+                            "four"
+                            "five"
+                             "six"
+                             "seven"
+                             "eigth"
+
+    }
+    .about {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto auto;
+        grid-gap: 10px;
+        /* Note: use " . "  as a placeholder if you want
+       to leave one section of the grid blank */
+        grid-template-areas: "selfie"
+                            "textAbout" 
+
+    }
+    .selfie {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto auto;
+        grid-gap: 10px;
+        padding:30px;
+        border-bottom-color: #d62923;
+        border-bottom-width: 10px;
+        border-bottom-style: solid;
+        /* Note: use " . "  as a placeholder if you want
+       to leave one section of the grid blank */
+        grid-template-areas: "my-image"
+                            "my-name"
+
+    }
+    
+    .my-img {
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:20px;
+        margin-bottom:0px;
+        height:180px;
+    }
+
+    .companyImg {
+        text-align: center;
+    }
+
+    
+    .job {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto auto;
+        grid-gap: 10px;
+        align-content: center;
+        /* Note: use " . "  as a placeholder if you want
+       to leave one section of the grid blank */
+        grid-template-areas: "companyImg"
+                            "desc1" 
+
+    }
+
+ }
+
+
+/**************     CLASSES         ****************************/
+.external {
+    text-decoration: underline;
+    text-transform: none;
+    color: #bc444c;
+}
+
+        .external:hover {
+            color: #FABC88;
+        }
+
+
+.textinput {
+     padding-right: 50px;
+     display: inline;
+     float: left;
+     font-size: 0.8em;
+     width: 300px;
+    }
+
+.checked {
+    color: #FF4081;
+  }
+    
+
+.fa-search {
+        margin-left: 20px;
+    }
+
+.fa {
+    font-size: 36px;
+    margin: 10px;
+}
+.fa-linkedin-square {
+        background-color: #ffffff;
+        color: rgb(75, 100, 241);
+        padding: 0px 0px;
+        font-size: 36px;
+        box-shadow: none;
+        text-transform:none;
+    }
+
+    .fa-linkedin-square:hover {
+            color: rgb(247, 154, 131);
+        }
+
+
+.fa-github {
+        background-color: #ffffff;
+        color: #000000;
+        padding: 0px;
+        font-size: 36px;
+        box-shadow: none;
+        text-transform:none;
+    }
+    
+    .fa-github {
+                color: rgb(247, 154, 131);
+            }
+
+            
+.containerBar{
+            width: 50%;
+            margin: 0 auto;
+          }
+@keyframes load{
+            from {
+              width: 0%
+            }
+          }
+@-webkit-keyframes load{
+            from {
+              width: 0%
+            }
+          }
+@-moz-keyframes load{
+            from {
+              width: 0%
+            }
+          }
+@-o-keyframes load{
+            from {
+              width: 0%
+            }
+          }
+
+.textAbout {
+    background-color:#f4efef;
+    color: #000000;
+    padding: 30px;
+}
+
+.header {
+    position:fixed;
+    background-color: #d1d0cc;
+    z-index: 1000;
+    text-align: left;
+    border-bottom-color: #d62923;
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+    width: 98%;
+    padding-left: 0px;
+    padding-right: 0px;
+
+}
+
+/**************** Card Education *********************************************/
+.eduCard {
+    box-shadow: 1px 4px 8px 1px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 200px;
+    height: 400px;
+    border-radius: 5px;
+  }
+  
+  .eduCard:hover {
+    box-shadow: 3px 12px 24px 3px rgba(0,0,0,0.2);
+    
+  }
+  
+ .eduCard img {
+    border-radius: 5px 5px 0 0;
+    width: 200px;
+    box-shadow: 1px 5px 9px 1px rgba(0,0,0,0.2);
+  }
+  
+ .eduBody {
+    padding: 2px 16px;
+
+ }
+ .eduBody .date{
+     position: relative;
+     display: inline;
+     top: -15px;
+ }
+
+
+
+/******************   SKILL BARS **********************************************/          
+.bar{
+            background-color: #EEE;
+            padding: 2px;
+            border-radius: 15px;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #FFF;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+          }
+     .bar::before{
+            content:  attr(data-skill);
+            background-color:#9d745b;
+            display: inline-block;
+            padding: 5px 0 5px 10px;
+            border-radius: inherit;
+    /*        animation: load 2s 0s;
+            -webkit-animation: load 2s 0s;
+            -moz-animation: load 2s 0s;
+            -o-animation: load 2s 0s;*/
+          }
+          
+  .bar.front::before{
+            background-color:#9d745b;
+          }
+  .bar.back::before{
+            background-color: #9d745b;
+          }
+          
+  .bar.learning::before{
+            width: calc(20% - 10px);
+          }
+  .bar.basic::before{
+            width: calc(40% - 10px);
+          }
+          .bar.intermediate::before{
+            width: calc(60% - 10px);
+          }
+          .bar.advanced::before{
+            width: calc(80% - 10px);
+          }
+          .bar.expert::before{
+            width: calc(100% - 10px);
+          }
+          
+
+#linkedin {
+    font-size: 36px;
+}
+
+#github {
+    font-size: 36px;
+    color:#000000;
+}
+
+
+#gallery {
+    position:relative;
+    margin-right:auto;
+    margin-left:auto;
+    width: 90%;
+    max-width: 2000px;
+    min-width: 150px;
+
+}
+
+/****************** SPINNING EFFECT ****************************************************************************/
+/****************** IMAGE EFFECT     ***************************************************************************/
+/****************** HOVER TO PAUSE   ***************************************************************************/
+
+
+
+
+@-webkit-keyframes spinner {
+    from {
+        -webkit-transform: rotateX(0deg);
+    }
+
+    to {
+        -webkit-transform: rotateX(-360deg);
+    }
+}
+
+/* all other browsers */
+@keyframes spinner {
+    from {
+        -moz-transform: rotateX(0deg);
+        -ms-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
+
+    to {
+        -moz-transform: rotateX(-360deg);
+        -ms-transform: rotateX(-360deg);
+        transform: rotateX(-360deg);
+    }
+}
+
+#stage {
+    margin: 1em auto;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+}
+
+#spinner {
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 6s;
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+    #spinner:hover {
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+    }
